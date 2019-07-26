@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one 🙂       */
+    display: flex;
+    align-items: center;
+}
+.content-fluid{
+    background: linear-gradient(to right, #75cbe7 0%, #138fc2 100%);
+    height:100vh;
+}
+.content{
+    margin:auto;
+}
+.row{
+    align-items: center;
+}
+.question{
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.question p, .author p{
+    font-size: 26px;
+    color: #1e1003;
+    display: inline-block;
+}
+.image{
+    width: 300px;
+    height: 350px;
+    background: url(images/cards/end-card.png) 100% 100% no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+.ans_click11, .ans_click12, .ans_click21, .ans_click22, .ans_click31, .ans_click32 ,
+.ans_click41, .ans_click42, .ans_click51, .ans_click52, .ans_click61, .ans_click62,
+.ans_click71, .ans_click72, .ans_click81, .ans_click82 ,.ans_click91, .ans_click92,
+.ans_click101, .ans_click102, .ans_click111, .ans_click112, .ans_click121, .ans_click122,
+.ans_click131, .ans_click132 ,.ans_click141, .ans_click142, .ans_click151, .ans_click152,
+.ans_click161, .ans_click162{
+    width: 50%;
+    height: 50%;
+    float: left;
+    position: absolute;
+    top: 0%;
+}
+
+.ans_click12,  .ans_click22,  .ans_click32 , .ans_click42, .ans_click52,  .ans_click62,.ans_click72,
+.ans_click82 ,.ans_click92,  .ans_click102, .ans_click112, .ans_click122, .ans_click132 ,.ans_click142,
+.ans_click152, .ans_click162
+{left: 50%;}
+
+.ans_click {
+    width: 45%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    top: -34%;
+    left: 30%;
+}
+.ans_click13, .ans_click23,.ans_click33 ,.ans_click43,.ans_click53,.ans_click63,.ans_click73,.ans_click83,.ans_click93
+,.ans_click103,.ans_click113,.ans_click123,.ans_click133,.ans_click143,.ans_click153,.ans_click163{
+    width:100%;
+    height:50%;
+    position: absolute;
+    bottom:0%;
+}
+.image__item, .image__item2, .image__item3 ,.image__item4,
+.image__item5, .image__item6,.image__item7, .image__item8,
+.image__item9,.image__item10, .image__item11, .image__item12,
+.image__item13, .image__item14, .image__item15,.image__item16{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition:0.5s;
+    -o-transition:0.5s;
+    -ms-transition:0.5s;
+    -moz-transition:0.5s;
+    -webkit-transition:0.5s;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.front-card, .back-card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition:1s;
+    -o-transition:1s;
+    -ms-transition:1s;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+}
+.front-card{transform: rotateY(180deg);}
+.back-card {transform: rotateY(360deg);}
+
+.image__item img , .image__item2 img , .image__item3  img ,.image__item4 img , .image__item5 img , .image__item6 img ,.image__item7 img , .image__item8 img , .image__item9 img ,.image__item10 img , .image__item11 img , .image__item12 img ,.image__item13 img , .image__item14 img , .image__item15 img ,.image__item16 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.answer1, .answer2 ,.answer3 {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+    transition:0.7s;
+    -o-transition:0.7s;
+    -ms-transition:0.7s;
+    -moz-transition:0.7s;
+    -webkit-transition:0.7s;
+}
+.author{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.author p{
+    margin: 15px 0;
+}
+
+.footer{
+    width: 100%;
+    height: 100px;
+}
+.ans_click21, .ans_click22,.ans_click23, .ans_click31, .ans_click32, .ans_click33 {display: none;}
+
+@media only screen and (max-width: 1200px) {
+    .image {
+        height: 350px;
+        width: 300px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .image {
+        height: 350px;
+        width: 300px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .image {
+        height: 300px;
+        width: 250px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .image {
+        height: 246px;
+        width: 171px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+@media only screen and (max-width: 387px) {
+    .image {
+        height: 213px;
+        width: 150px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .image {
+        height: 194px;
+        width: 144px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+    }
+}
+@media only screen and (max-width: 284px) {
+    .image {
+        height: 170px;
+        width: 126px;
+        background: url(images/cards/end-card.png) 100% 100% no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+
+    }
+}
+
